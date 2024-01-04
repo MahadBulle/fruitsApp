@@ -89,7 +89,8 @@ class _BananaState extends State<Banana> {
                                          padding: const EdgeInsets.only(left: 30),
                                          child: Container(
                                           decoration: BoxDecoration(
-                                            border: Border()
+                                            border: Border.all(color: Colors.blue),
+                                            borderRadius: BorderRadius.circular(20)
                                           ),
                                            child: ElevatedButton(
                                             style: ElevatedButton.styleFrom(
@@ -100,7 +101,7 @@ class _BananaState extends State<Banana> {
                                               )
                                             ),
                                               onPressed: incrementCounter,
-                                              child: Icon(Icons.add),
+                                              child: Icon(Icons.add, color: Colors.blue,),
                                             ),
                                          ),
                                        ),
@@ -110,14 +111,22 @@ class _BananaState extends State<Banana> {
                                           fontSize: 25,
                                           fontWeight: FontWeight.bold),
                                     ),
-                                        ElevatedButton(
-                                          style: ElevatedButton.styleFrom(
-                                            shape: RoundedRectangleBorder(
-                                              borderRadius: BorderRadius.circular(15)
-                                            )
+                                        Container(
+                                          decoration: BoxDecoration(
+                                            borderRadius: BorderRadius.circular(20),
+                                            border: Border.all(color: Colors.blue)
                                           ),
-                                          onPressed: decrementCounter,
-                                          child: Icon(Icons.remove),
+                                          child: ElevatedButton(
+                                            style: ElevatedButton.styleFrom(
+                                              backgroundColor: Colors.white,
+                                              elevation: 0,
+                                              shape: RoundedRectangleBorder(
+                                                borderRadius: BorderRadius.circular(15),
+                                              )
+                                            ),
+                                            onPressed: decrementCounter,
+                                            child: Icon(Icons.remove, color: Colors.blue,),
+                                          ),
                                         ),
                                     ],
                                   ),
